@@ -10,7 +10,6 @@ public class CannonController : MonoBehaviour
     public Transform cannonMove;
     public Camera cam;
 
-    [SerializeField]
     float xRotation;
     // Start is called before the first frame update
     void Start()
@@ -22,7 +21,12 @@ public class CannonController : MonoBehaviour
     void Update()
     {
         float lookX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
-        float lookY = Input.GetAxis("Mouse y") * sensitivity * Time.deltaTime;
+        float lookY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
 
+        xRotation -= lookX;
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+
+        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        cannonMove.Rotate(Vector3.up * lookX);
     }
 }
