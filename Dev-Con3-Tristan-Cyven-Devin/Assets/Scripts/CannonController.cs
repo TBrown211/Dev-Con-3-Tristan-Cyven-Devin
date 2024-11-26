@@ -21,6 +21,8 @@ public class CannonController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        float lookX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
+        float lookY = Input.GetAxis("Mouse y") * sensitivity * Time.deltaTime;
+
     }
 }
