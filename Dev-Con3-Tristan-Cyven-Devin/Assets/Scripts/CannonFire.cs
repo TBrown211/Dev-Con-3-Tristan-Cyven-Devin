@@ -8,16 +8,17 @@ public class CannonFire : MonoBehaviour
 
     public float shootForce;
 
-    public float timeBetweenShooting;
-    public float timeBetweenShots;
+    public float fireRate = 10f;
+    private float nextTimeToFire = 0f;
 
     public Camera cannonCam;
     public Transform attackPoint;
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && Time.time >= nextTimeToFire)
         {
+            nextTimeToFire = Time.time + fireRate;
             ShootCannon();
         }
     }
@@ -43,5 +44,7 @@ public class CannonFire : MonoBehaviour
         newCannonBall.transform.forward = cannonBallDirection.normalized;
 
         newCannonBall.GetComponent<Rigidbody>().AddForce(cannonBallDirection.normalized * shootForce, ForceMode.Impulse);
+
+
     }
 }

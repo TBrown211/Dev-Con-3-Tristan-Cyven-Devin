@@ -249,8 +249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cannonBallPreFab: {fileID: 450812029903852017, guid: eb7c6db307e2b1a438d2863848d5408a, type: 3}
   shootForce: 1000
-  timeBetweenShooting: 0
-  timeBetweenShots: 0
+  fireRate: 1
   cannonCam: {fileID: 389174531}
   attackPoint: {fileID: 1588800995}
 --- !u!114 &386930429
