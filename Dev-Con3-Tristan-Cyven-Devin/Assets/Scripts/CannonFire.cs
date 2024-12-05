@@ -5,6 +5,8 @@ using UnityEngine;
 public class CannonFire : MonoBehaviour
 {
     public GameObject cannonBallPreFab;
+    public ParticleSystem muzzleFlash;
+    public AudioSource cannonSound;
 
     public float shootForce;
 
@@ -37,6 +39,10 @@ public class CannonFire : MonoBehaviour
         {
             targetPoint = ray.GetPoint(75);
         }
+
+        muzzleFlash.Play();
+        cannonSound.Play();
+
 
         Vector3 cannonBallDirection = targetPoint - attackPoint.position;
 
