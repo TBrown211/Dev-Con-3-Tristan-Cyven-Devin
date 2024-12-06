@@ -18,8 +18,8 @@ Our game is an inspired mixture of the Barrel shoot mini-game from The Legend of
 -	Make use of a Pirate theme
 -	Have a system that could press the fire button rapidly for faster shots or hold the button down for a power shot. 
 ### Citations: 
-[SHOOTING with BULLETS + CUSTOM PROJECTILES || Unity 3D Tutorial (#1)](https://www.youtube.com/watch?v=wZ2UUOC17AY&t=179s)
-[FIRST PERSON MOVEMENT in Unity - FPS Controller](https://www.youtube.com/watch?v=_QajrabyTJc&t=748s)
-[Designing with Physics: Bend the Physics Engine to Your Will](https://www.youtube.com/watch?v=NwPIoVW65pE)
+- [SHOOTING with BULLETS + CUSTOM PROJECTILES || Unity 3D Tutorial (#1)](https://www.youtube.com/watch?v=wZ2UUOC17AY&t=179s)
+- [FIRST PERSON MOVEMENT in Unity - FPS Controller](https://www.youtube.com/watch?v=_QajrabyTJc&t=748s)
+- [Designing with Physics: Bend the Physics Engine to Your Will](https://www.youtube.com/watch?v=NwPIoVW65pE)
 
 
