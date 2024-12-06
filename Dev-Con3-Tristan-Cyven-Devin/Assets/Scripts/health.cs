@@ -15,7 +15,7 @@ public class HealthSystem : MonoBehaviour
             
             if (Playerhealth <= 0)
             {
-                Debug.Log("Game Over!");
+                Debug.Log("Nice Try");
                 
             }
             else
