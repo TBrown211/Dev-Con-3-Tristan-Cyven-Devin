@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5952078532685485579}
   m_Layer: 0
   m_Name: Kill_Sphere
-  m_TagString: Untagged
+  m_TagString: kill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
