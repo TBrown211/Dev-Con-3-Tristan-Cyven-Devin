@@ -37,7 +37,7 @@ public class Spawner : MonoBehaviour
            
             currentBall = Instantiate(killSphere, transform.position, Quaternion.identity);
 
-            spawnTime2 = Random.Range(4, 7);
+            spawnTime2 = Random.Range(15, 20);
             Destroy(currentBall, spawnTime2);
 
             if (killSphere == null)
