@@ -5,19 +5,22 @@ using UnityEngine;
 public class CannonFire : MonoBehaviour
 {
     public GameObject cannonBallPreFab;
+    public ParticleSystem muzzleFlash;
+    public AudioSource cannonSound;
 
     public float shootForce;
 
-    public float timeBetweenShooting;
-    public float timeBetweenShots;
+    public float fireRate = 10f;
+    private float nextTimeToFire = 0f;
 
     public Camera cannonCam;
     public Transform attackPoint;
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && Time.time >= nextTimeToFire)
         {
+            nextTimeToFire = Time.time + fireRate;
             ShootCannon();
         }
     }
@@ -37,11 +40,17 @@ public class CannonFire : MonoBehaviour
             targetPoint = ray.GetPoint(75);
         }
 
+        muzzleFlash.Play();
+        cannonSound.Play();
+
+
         Vector3 cannonBallDirection = targetPoint - attackPoint.position;
 
         GameObject newCannonBall = Instantiate(cannonBallPreFab, attackPoint.position, Quaternion.identity);
         newCannonBall.transform.forward = cannonBallDirection.normalized;
 
         newCannonBall.GetComponent<Rigidbody>().AddForce(cannonBallDirection.normalized * shootForce, ForceMode.Impulse);
+
+
     }
 }
