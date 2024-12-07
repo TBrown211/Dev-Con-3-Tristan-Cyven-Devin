@@ -49,7 +49,7 @@ public class HighScores : MonoBehaviour
         scoreArray[1].ToString("N") + "\n" + scoreArray[2].ToString("N") + "\n" + scoreArray[3].ToString("N") + "\n" +
         scoreArray[4].ToString("N") + "\n" + scoreArray[5].ToString("N") + "\n" + scoreArray[6].ToString("N") + "\n" +
         scoreArray[7].ToString("N") + "\n" + scoreArray[8].ToString("N") + "\n" + scoreArray[9].ToString("N") + "\n" + "\n" +
-        "Your score:" + scoreCurrent.ToString("N");
+        "Your score: " + scoreCurrent.ToString("N");
 
         GetComponent<TMP_Text>().text = scoreBoard;
 

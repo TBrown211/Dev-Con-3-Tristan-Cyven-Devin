@@ -619,6 +619,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &792157923 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8050780501073465795, guid: 7a671a6930075f1499e349ad2c6914c0, type: 3}
+  m_PrefabInstance: {fileID: 1417885342}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &792587026
 GameObject:
   m_ObjectHideFlags: 0
@@ -1599,6 +1604,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a671a6930075f1499e349ad2c6914c0, type: 3}
+--- !u!1 &1562778527 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4648805715546706336, guid: 7a671a6930075f1499e349ad2c6914c0, type: 3}
+  m_PrefabInstance: {fileID: 1417885342}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1606241106
 GameObject:
   m_ObjectHideFlags: 0
@@ -1647,6 +1657,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1652428385 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5301313659429799296, guid: 7a671a6930075f1499e349ad2c6914c0, type: 3}
+  m_PrefabInstance: {fileID: 1417885342}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1817364788
 GameObject:
   m_ObjectHideFlags: 0
@@ -1658,6 +1673,7 @@ GameObject:
   - component: {fileID: 1817364791}
   - component: {fileID: 1817364790}
   - component: {fileID: 1817364789}
+  - component: {fileID: 1817364792}
   m_Layer: 0
   m_Name: Kill_Wall
   m_TagString: Untagged
@@ -1714,6 +1730,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1817364792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817364788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50bc7f1de9cf1704fb67a1e2df8e5650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeCount: 0
+  health: 3
+  playerScore: 0
+  TimerText: {fileID: 792157923}
+  HealthDisplay1: {fileID: 1652428385}
+  HealthDisplay2: {fileID: 1562778527}
+  HealthDisplay3: {fileID: 1818915251}
+--- !u!1 &1818915251 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8209761667978386929, guid: 7a671a6930075f1499e349ad2c6914c0, type: 3}
+  m_PrefabInstance: {fileID: 1417885342}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1920014418
 Mesh:
   m_ObjectHideFlags: 0
