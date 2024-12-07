@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -66,6 +67,7 @@ public class UI_Manager : MonoBehaviour
         {
             health--;
         }
+        Destroy(collision.gameObject);
     }
 
     void OnDisable()
