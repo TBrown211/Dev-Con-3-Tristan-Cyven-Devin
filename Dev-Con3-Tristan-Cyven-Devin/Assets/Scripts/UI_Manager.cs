@@ -1,7 +1,9 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UI_Manager : MonoBehaviour
 {
@@ -17,7 +19,7 @@ public class UI_Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        health = 3;
     }
 
     // Update is called once per frame
@@ -26,23 +28,37 @@ public class UI_Manager : MonoBehaviour
         timeCount += Time.deltaTime;
         TimerText.GetComponent<TMP_Text>().text = timeCount.ToString("N");
 
-        if (health < 1)
-        {
-            HealthDisplay1.SetActive(false);
-        }
-        else if (health < 2)
-        {
-            HealthDisplay2.SetActive(false);
-        }
-        else if (health < 3)
+      
+
+        if (health < 3)
         {
             HealthDisplay3.SetActive(false);
+
+            if (health < 2)
+            {
+                HealthDisplay2.SetActive(false);
+
+                if (health < 1)
+                {
+                    HealthDisplay1.SetActive(false);
+                    
+                    if (health < 0)
+                    {
+                        Debug.Log("Game Over!");
+                        SceneManager.LoadScene("DeathScreen");
+                    }
+                }
+            }
         }
-        else
+        if (Input.GetKeyDown(KeyCode.Keypad8))
         {
-            Debug.Log("Game Over!");
+            for (int i = 0; i < 10; i++)
+            {
+                PlayerPrefs.SetFloat("score" + i.ToString(), 0);
+            }
         }
     }
+
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -54,6 +70,6 @@ public class UI_Manager : MonoBehaviour
 
     void OnDisable()
     {
-        PlayerPrefs.SetInt("currentScore", playerScore);
+        PlayerPrefs.SetFloat("currentScore", timeCount);
     }
 }
