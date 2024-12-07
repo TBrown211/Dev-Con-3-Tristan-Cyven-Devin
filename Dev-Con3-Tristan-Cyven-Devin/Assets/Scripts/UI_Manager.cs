@@ -26,7 +26,12 @@ public class UI_Manager : MonoBehaviour
         timeCount += Time.deltaTime;
         TimerText.GetComponent<TMP_Text>().text = timeCount.ToString("N");
 
-        if (health < 1)
+        if (health <= 0)
+        {
+            health = 0;
+            Debug.Log("Game Over!");
+        }
+        else if (health < 1)
         {
             HealthDisplay1.SetActive(false);
         }
@@ -37,10 +42,6 @@ public class UI_Manager : MonoBehaviour
         else if (health < 3)
         {
             HealthDisplay3.SetActive(false);
-        }
-        else
-        {
-            Debug.Log("Game Over!");
         }
     }
 
